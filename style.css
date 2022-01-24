@@ -1,0 +1,70 @@
+.inline{
+    display: inline;
+    background-color: red;
+    color: white;
+    padding: 18px;
+}
+
+.inlineBlock{
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 18px;
+}
+
+.block{
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 18px;
+}
+
+.none{
+    display: none;
+    background-color: red;
+    color: white;
+    padding: 18px;
+}
+
+.static{
+    position: static;
+    border: 2px solid #666666;
+}
+
+.relative{
+    position: relative;
+    border: 2px solid #666666;
+    left: 12px;
+}
+
+.fixed{
+    position: fixed;
+    border: 2px solid #666666;
+    top: 500px;
+    bottom: 20px;
+    left: 500px;
+    right: 280px;
+}
+
+.sticky{
+    position: sticky;
+    bottom: 0;
+    border: 2px solid #666666;
+}
+
+.relative2 {
+    position: relative;
+    width: 380px;
+    height: 190px;
+    border: 3px solid #666666;
+} 
+  
+.absolute {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    width: 120px;
+    height: 60px;
+    border: 3px solid #666666;
+}
+
