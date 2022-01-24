@@ -1,1 +1,1 @@
-# Trainig
+# Training
