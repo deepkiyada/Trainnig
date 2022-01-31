@@ -3,7 +3,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("Assets/header.jpg");
+    background-image: url("header.jpg");
     height: 100%; 
     background-position: center;
     background-size: cover;
@@ -159,17 +159,17 @@ body, html {
 }
 
 .cb1{
-    background-image: url(Assets/table-1.jpg);
+    background-image: url(table-1.jpg);
     background-size: contain; 
 }
 
 .cb2{
-    background-image: url(Assets/table-2.jpg);
+    background-image: url(table-2.jpg);
     background-size: contain;
 }
 
 .cb3{
-    background-image: url(Assets/table-3.jpg);
+    background-image: url(table-3.jpg);
     background-size: contain;
 }
 
