@@ -77,7 +77,7 @@ function showtask(){
                 &#10003;
             </span>
             <label id="inputLabel${index}" class="taskLabel" for="task1">${item}</label>
-            <label id="noResult" for="task1"></label>
+            
         </div>
         <div class="taskdelete">
             <button onclick="deleteTask(${index})">
@@ -108,15 +108,18 @@ inputBox.addEventListener("input", function(){
     Array.from(labels).forEach(function(task){
         let taskText = task.getElementsByTagName("label")[0].innerHTML;
         let counter = 0;
+        let noResult = document.getElementById("noResult");
 
         if(taskText.toLowerCase().includes(searchInputValue)){
             task.style.display = "flex";
         }else{
             task.style.display = "none";
+            // noResult.style.display = "block"
             counter =+ 1;
         }
-
-        if(counter == 0){
+        
+        if(counter == 1){
+            console.log(counter);
             document.getElementById("noResult").innerHTML = "No Results Found.";
         }
 
@@ -126,8 +129,6 @@ inputBox.addEventListener("input", function(){
 
 function checkingCheckBox(index) {
 
-    // let storedValues = localStorage.getItem("localtask");
-    // let taskObj = JSON.parse(storedValues);
     let inputLabelIndex = `inputLabel${index}`
     let checkboxIndex = `checkbox${index}`;
     let toggleIconIndex = `toggleIcon${index}`;
