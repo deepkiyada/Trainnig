@@ -107,21 +107,21 @@ inputBox.addEventListener("input", function(){
     
     Array.from(labels).forEach(function(task){
         let taskText = task.getElementsByTagName("label")[0].innerHTML;
-        let counter = 0;
-        let noResult = document.getElementById("noResult");
+        // let counter = 0;
+        // let noResult = document.getElementById("noResult");
 
         if(taskText.toLowerCase().includes(searchInputValue)){
             task.style.display = "flex";
         }else{
             task.style.display = "none";
             // noResult.style.display = "block"
-            counter =+ 1;
+            // counter =+ 1;
         }
         
-        if(counter == 1){
-            console.log(counter);
-            document.getElementById("noResult").innerHTML = "No Results Found.";
-        }
+        // if(counter == 1){
+        //     console.log(counter);
+        //     document.getElementById("noResult").innerHTML = "No Results Found.";
+        // }
 
 
     })
