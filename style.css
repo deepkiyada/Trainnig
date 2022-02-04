@@ -1,0 +1,139 @@
+html{
+    background-color: rgba(211, 211, 211, 0.411);
+    font-family: 'Verdana', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', sans-serif;
+}
+
+@media (max-width: 640px) {
+    .container{
+        margin: 35px 10px 20px 10px;    
+    }
+    .taskLabel{
+        max-width: 150px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+    .container{
+        margin: 35px 25px;    
+    }
+    .taskLabel{
+        max-width: 395px;
+    }
+}
+
+@media (min-width: 1007px) and (max-width: 1250px){
+    .container{
+        margin: 35px 200px;    
+    }
+    .taskLabel{
+        max-width: 410px;
+    }
+}
+
+@media (min-width: 1251px){
+    .container{
+        margin: 50px 300px;
+    }
+    .taskLabel{
+        max-width: 450px;
+    }
+}
+
+.taskInput{
+    display: flex;
+    justify-content: center;
+}
+
+.taskInput input{
+    flex-grow: 7;   
+    margin-right: 10px;
+    height: 25px;
+    font-family: FontAwesome;
+}
+
+.taskInput input:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.taskInput button{
+    flex-grow: 3;
+    background-color: skyblue;
+    margin-left: 10px;
+    padding: 7px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.taskInput button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.taskcontent{
+    display: flex;
+}
+
+.taskLabel{
+    padding: 2px 0 2px 5px;
+    word-wrap: break-word;
+    /* max-width: 800px; */
+    margin: 0;
+}
+
+.section-two{
+    background-color: white;
+    border: 1px solid gray;
+    margin-top: 40px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.heading{
+    padding-left: 25px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+}
+
+#showTaskUl{
+    padding: 15px 25px 15px 25px;
+    margin: 0;
+}
+
+.flex-container ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    border-top: 1px solid rgba(211, 211, 211, 0.411);
+    align-items: center;
+}
+
+.taskdelete button{
+    background-color: rgba(211, 211, 211, 0.411);
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.taskdelete button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.taskdelete button:active{
+    background-color: salmon;
+}
+
+.toggle{
+    text-align: center;
+    border: 1px solid salmon;
+    padding: 3px;
+    color: salmon;
+    background-color: rgb(247, 205, 188);
+}
+
+.toggle-active{
+    display: none;
+    text-align: center;
+    border: 1px solid green;
+    color: green;
+    padding: 3px;
+    background-color: lightgreen;
+}
