@@ -3,7 +3,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("header.jpg");
+    background-image: url("Assets/header.jpg");
     height: 100%; 
     background-position: center;
     background-size: cover;
@@ -15,8 +15,9 @@ body, html {
 
 .nav-bar{
     background: transparent;
-    padding: 17px;
+    /* padding: 17px; */
     font-size: 15px;
+    height: 6rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,11 +25,12 @@ body, html {
 
 .nav-list{
     list-style-type: none;
+    margin-bottom: 0;
 }
 
 .nav-list .list-item{
     display: inline-block;
-    padding: 20px 10px; 
+    padding: 0px 10px; 
 }
 
 .nav-bar a{
@@ -38,6 +40,22 @@ body, html {
 
 .nav-bar a:hover{
     color: powderblue;
+}
+
+.scrolling-active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    height: 6rem;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+    padding: 0px 0px;
+}
+
+.scrolling-active nav ul a{
+    color: black;
 }
 
 .btn{
@@ -159,17 +177,17 @@ body, html {
 }
 
 .cb1{
-    background-image: url(table-1.jpg);
+    background-image: url(Assets/table-1.jpg);
     background-size: contain; 
 }
 
 .cb2{
-    background-image: url(table-2.jpg);
+    background-image: url(Assets/table-2.jpg);
     background-size: contain;
 }
 
 .cb3{
-    background-image: url(table-3.jpg);
+    background-image: url(Assets/table-3.jpg);
     background-size: contain;
 }
 
