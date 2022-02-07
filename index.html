@@ -178,14 +178,14 @@
             // console.log(img.src);
 
             header.classList.toggle("scrolling-active", window.scrollY > 0);
-            // img.src.toggle("Assets/logo-active.png", window.scrollY > 0);
+            // img.src.toggle("logo-active.png", window.scrollY > 0);
 
             var img = document.getElementById('imgplus').src;
             if (img.indexOf('logo-active.png')!=-1) {
-                document.getElementById('imgplus').src  = 'Assets/logo.png';
+                document.getElementById('imgplus').src  = 'logo.png';
             }
             else {
-            document.getElementById('imgplus').src = 'Assets/logo-active.png';
+            document.getElementById('imgplus').src = 'logo-active.png';
             }
 
         })
