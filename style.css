@@ -177,17 +177,17 @@ body, html {
 }
 
 .cb1{
-    background-image: url(Assets/table-1.jpg);
+    background-image: url(table-1.jpg);
     background-size: contain; 
 }
 
 .cb2{
-    background-image: url(Assets/table-2.jpg);
+    background-image: url(table-2.jpg);
     background-size: contain;
 }
 
 .cb3{
-    background-image: url(Assets/table-3.jpg);
+    background-image: url(table-3.jpg);
     background-size: contain;
 }
 
