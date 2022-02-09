@@ -1,0 +1,312 @@
+*{
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: 400;
+}
+
+p{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Media queries */
+@media (max-width: 640px) {
+    #cardsDisplay{
+        display: block !important;
+    }
+    .card{
+        flex: 1 0 38% !important;
+    }
+    .topbar-date{
+        padding-top: 110px;
+    }
+    .topbar-center{
+        display: inline-block !important;
+        margin: 0px 20px;
+    }
+    .topbar-weather{
+        padding-top: 110px;
+    }
+    select{
+        padding-right: 8px !important;
+    }
+    .dateDate{
+        font-size: 40px !important;
+    }
+    .cloudWeather{
+    font-size: 30px !important;
+    }
+    .temperatureWeather{
+        font-size: 30px !important;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+    .card{
+        flex: 1 0 38% !important;
+    }
+    .topbar-date{
+        padding-top: 110px;
+    }
+    .topbar-center{
+        display: inline-block !important;
+        margin: 0px 20px;
+    }
+    .topbar-weather{
+        padding-top: 110px;
+    }
+    select{
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 1007px) and (max-width: 2000px){
+    .card{
+        flex: 1 0 21% !important;
+    }
+    .days{
+        flex-grow: 2 !important;
+    }
+    .date{
+        flex-grow: 2 !important;
+    }
+    select{
+        padding-right: 0px !important;
+    }
+    .place{
+        padding: 10px 5px !important;
+    }
+    .days{
+        padding: 10px 5px !important;
+    }
+    .date{
+        padding: 10px 5px !important;
+    }
+    .setting{
+        padding: 23px 18px !important;
+    }
+    .go{
+        padding: 5px 5px;
+    }
+}
+
+@media (min-width: 2000px){
+    .card{
+        flex: 1 0 20% !important;
+    }
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* topbar*/ 
+#topbar{
+    margin: 50px;
+}
+
+/*date */
+.topbar-date{
+    display: flex;
+}
+
+.dateDate{
+    font-size: 45px;
+    margin: 5px;
+}
+
+.dayDate{
+    font-weight: 600;
+    padding: 8px 5px 3px 5px;
+}
+
+.monthDate{
+    color: gray;
+    margin: 3px 5px 5px 5px;
+}
+
+
+
+/* topbar-center */
+.topbar-center{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.topbar-centerLabel{
+    font-size: 15px;
+    color: gray;
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+.topbar-centerValue{
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 3px;
+}
+
+
+/* topbar place */
+.place{
+    flex-grow: 3;
+    padding: 10px 0px 10px 20px;
+}
+
+select{
+    border: none;
+    outline: none;
+    background-color: white;
+    padding-right: 50px;
+}
+
+/* topbar days */
+.days{
+    border-left: 1px solid gray;
+    flex-grow: 3;
+    padding: 10px 0px 10px 20px;
+}
+
+/* topbar date */
+.date{
+    border-left: 1px solid gray;
+    flex-grow: 3;
+    padding: 10px 0px 10px 20px;
+}
+
+/* topbar setting */
+.setting{
+    border-left: 1px solid gray;
+    padding: 23px 23px 20px 23px;
+}
+
+/* topbar go */
+.go{
+    border-left: 1px solid gray;
+    padding: 12px 15px;
+}
+
+.go button{
+    background-color:salmon;
+    border-radius: 10px;
+    border: 1px solid salmon;
+    color: white;
+}
+
+/* weather */
+.topbar-weather{
+    display: flex;
+}
+
+.cloudWeather{
+    font-size: 45px;
+    margin: 5px;
+    color: skyblue;
+}
+
+.temperatureWeather{
+    font-size: 45px;
+    margin: 5px;
+}
+
+.cityWeather{
+    font-weight: 600;
+    padding: 8px 5px 3px 5px;
+}
+
+.countryWeather{
+    color: gray;
+    margin: 3px 5px 5px 5px;
+    justify-content: center;    
+}
+
+
+
+
+/* card */
+#cardsDisplay{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    /* to make row of 3 flex boxes */
+    flex: 1 0 25%; 
+    /* width: 25%; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: 15px;
+}
+
+/* card-header */
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.cardHeading{
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.cardDate{
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.cardCategory{
+    font-size: 15px ;
+    color: gray;
+    /* margin: 3px 5px 5px 5px; */
+}
+
+/* temperature */
+.card-weather{
+    font-size: 15px;
+}
+
+hr{
+    font-weight: 600;
+    width: 20px;
+    margin: 0px 0px 15px 0px;
+}
+
+.card-temperature{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* card-img */
+.cityImg{
+    width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+/* card-bottombar */
+.card-bottomBar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.exploreBtn button{
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
