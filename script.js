@@ -74,7 +74,7 @@ function selectOption(){
 
     if(selectedCity != null){
 
-        var urla = "http://api.weatherapi.com/v1/current.json?key=fd8e5c4dc1f349379c7101858220802&q=";
+        var urla = "https://api.weatherapi.com/v1/current.json?key=fd8e5c4dc1f349379c7101858220802&q=";
         var urlb = selectedCity;
         var urlc = "&aqi=no";
 
