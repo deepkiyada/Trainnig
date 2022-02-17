@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Assignment - 4</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0723dc65c7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Login & Signup -->
+    <div id="home">
+        <div class="login">
+            <button class="border-radius" onclick="openLogin()">Log In</button><br>
+            If you already been here!
+        </div>
+        <div class="signup">
+        <!-- <div></div> -->
+            New to Dashboard?!,<br>
+            <button class="border-radius" onclick="openSignup()">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Login container -->
+    <div id="loginContainer" class="border-radius">
+        <form action="" id="login">
+          <div onclick="closeLogin()"><i class="fas fa-times"></i></div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="loginEmail" class="border-radius" />
+            <p class="loginerror">Please enter Email id.</p>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="loginPassword" class="border-radius" />
+            <p class="loginerror">Please enter your passsword.</p>
+          </div>
+          <div>
+            <div><input type="submit" value="Login" id="loginButton" class="border-radius"/></div>
+            <div><a href="#" id="forgetPasswordLink">Forget passsword</a></div>
+          </div>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+
+    <!-- Signup container -->
+    <div id="signupContainer" class="border-radius">
+        <form action="" id="signup" enctype="multipart/form-data">
+          <div onclick="closeSignup()"><i class="fas fa-times"></i></div>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" class="border-radius" />
+            <p class="signuperror">Please fill name field</p>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" class="border-radius" />
+            <p class="signuperror">Please fill email field</p>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" class="border-radius" />
+            <p class="signuperror">Please fill password field</p>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" class="border-radius" pattern="[1-9]{1}[0-9]{9}"/>
+            <p class="signuperror">Please fill phone field</p>
+          </div>
+            <input
+              type="submit"
+              value="Sign Up"
+              id="signupButton"
+              class="border-radius"
+            />
+          </div>
+        </form>
+      </div>
+      <!-- END - Signup container -->
+
+
+    <div id="userList">
+        <div class="sidebar">
+            <a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a>
+            <a class="active" href="#agency"><i class="fas fa-id-card"></i> Agency</a>
+            <a href="#clients"><i class='fas fa-torii-gate'></i> Clients</a>
+            <a href="#associations"><i class="fas fa-network-wired"></i>  Associations</a>
+        </div>
+
+        <div class="container">
+            <a id="addAgencyBtn2" onclick="openUpdateAdmin()">
+                <div class="user">
+                        <img src="user.png" alt="user profile picture" class="img-circle">
+                        <div class="username" id="userName"></div>
+                </div>
+                <div class="logout">
+                    <button type="button" onclick="home()" id="logoutButton">Log Out</button>
+                </div>
+            </a>
+        
+                    <!-- The Modal -->
+                    <div id="addAgencyModal2" class="modal2">
+                        <form action="" id="adminForm" enctype="multipart/form-data">
+                            <!-- Modal content -->
+                            <div class="modal-content2">
+                                <span class="close2">&times;</span>
+                                <div class="box">
+                                    <div class="addAgencyHeading">
+                                        Update User Information
+                                    </div>
+                                    <hr>
+                                    <div class="scroll">
+                                        <div class="userImg">
+                                            <img src="user.png" alt="User Profile Picture">
+                                        </div>
+                                        <div class="name">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="adminname" value="" required>
+                                        </div>
+                                        <div class="email">
+                                            <label for="email id">Email Id:</label>
+                                            <input type="email" id="adminemail" value="" required>
+                                        </div>
+                                        <div class="password">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="adminpassword" value="" required>
+                                        </div>
+                                        <div class="phone">
+                                            <label for="tel">Phone No.</label>
+                                            <input type="tel" id="adminphone" value="" required>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="userFooter">
+                                        <button id="cancelBtn2" type="button">Cancel</button>
+                                        <button id="updatePurpleBtn" type="submit">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+
+            <div class="section">
+
+                <table>
+                    <!-- Trigger/Open The Modal -->
+                    <div class="tableFlexDiv">
+                        <button id="addAgencyBtn">Add Agency</button>
+                        <form id="addUserForm">
+                            <!-- The Modal -->
+                            <div id="addAgencyModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="box">
+                                        <div class="addAgencyHeading">
+                                            Add Agency
+                                        </div>
+                                        <hr>
+                                        <div class="scroll">
+                                            <div class="name">
+                                                <label for="name">Name</label><br>
+                                                <input type="text" id="addname" placeholder="Name">
+                                            <p class="addUserError">Please fill name field</p>
+                                            </div>
+                                            <div class="email">
+                                                <label for="email id">Email Id:</label><br>
+                                                <input type="email" id="addemail" placeholder="abc@email.com">
+                                                <p class="addUserError">Please fill email field</p>
+                                            </div>
+                                            <div class="phone">
+                                                <label for="phone">Phone Number</label><br>
+                                                <input type="number" id="addphone" pattern="[1-9]{1}[0-9]{9}"
+                                                placeholder="9876543210">
+                                                <p class="addUserError">Please fill phone field</p>
+                                            </div>
+                                            <div class="address">
+                                                <label for="address">Address</label><br>
+                                                <input type="text" id="addaddress" placeholder="Street, Road, City - Pin Code, State, Country">
+                                                <p class="addUserError">Please fill city field</p>
+                                            </div>        
+                                            <div class="country">
+                                                <label for="country">Country</label><br>
+                                                <input type="text" id="addcountry" placeholder="Country">
+                                                <p class="addUserError">Please fill country field</p>
+                                            </div>
+                                            <div style="padding-bottom: 0px" class="img">
+                                                <label for="img">Profile Picture (Disabled)</label>
+                                                <input style="border: none;" disabled id="addimage" type="file">
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="addAgencyFooter">
+                                            <button id="cancelBtn" type="button">Cancel</button>
+                                            <button id="addUserSubmitButton" type="submit">Add User</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <p id="message"></p>
+
+
+                        <input type="text" id="searchCountry" placeholder="Add Country Name to Search">
+                    </div>
+
+                    <!-- <thead>
+                    <tr id="#">
+                        <th># <i class="fas fa-arrow-up"></i></th>
+                        <th>Name <i class="fas fa-arrow-up"></i></th>
+                        <th>City <i class="fas fa-arrow-up"></i></th>
+                        <th>Country <i class="fas fa-arrow-up"></i></th>
+                        <th>Action</i></th>
+                    </tr>
+                    </thead> -->
+                    <tbody id="tableData">
+
+                    </tbody>
+                
+                </table>
+                <div id="pagination">
+                    <button onclick="previousPage()" id="previousPageButton" class="border-radius">
+                      Previous
+                    </button>
+                    <p>
+                      <span id="currentPageNumber"></span> /
+                      <span id="totalNumberOfPage"></span>
+                    </p>
+                    <button onclick="nextPage()" id="nextPageButton" class="border-radius">
+                      Next
+                    </button>
+                  </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="updateAgencyModal" class="modal3">
+
+                    <!-- Modal content -->
+                    <form id="updateUserForm" enctype="multipart/form-data">
+                        <div class="modal-content3">
+                            <span class="close3">&times;</span>
+                            <div class="box">
+                                <div class="addAgencyHeading">
+                                    Update Agency Information
+                                </div>
+                                <hr>
+                                <div class="scroll">
+                                    <div class="name">
+                                        <label for="name">Name</label><br>
+                                        <input required id="updatename" type="text">
+                                    </div>
+                                    <div class="email">
+                                        <label for="email id">Email Id:</label><br>
+                                        <input type="email" required id="updateemail">
+                                    </div>
+                                    <div class="phone">
+                                        <label for="phone">Phone Number</label><br>
+                                        <input type="number" required id="updatephone">
+                                    </div>
+                                    <div class="address">
+                                        <label for="address">Address</label><br>
+                                        <input type="text" required
+                                        id="updateaddress">
+                                    </div>        
+                                    <div class="country">
+                                        <label for="country">Country</label><br>
+                                        <input type="text" required
+                                        id="updatecountry">
+                                    </div>
+                                    <!-- <div style="padding-bottom: 0px" class="img">
+                                        <label for="img">Profile Picture</label>
+                                        <input style="border: none;" type="file">
+                                    </div> -->
+                                </div>
+                                <hr>
+                                <div class="userFooter">
+                                    <button id="cancelBtn3" type="button">Cancel</button>
+                                    <button id="purpleBtn" type="submit">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="dashboard.js"></script>
+</html>
